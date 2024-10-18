@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Gracias por tu Amistad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #e643a7;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        .content img {
+           width: 300px;
+           height: 200px; 
+           object-fit: cover; 
+           margin: 10px;
+       }
+
+        .content img {
+            width: 300px;
+            margin: 10px;
+        }
+        .text-center {
+            text-align: center;
+            margin: 0 20px;
+        }
+        p {
+            margin: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #a903af;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gracias por tu Amistad</h1>
+
+    <!-- Contenedor para imágenes y texto -->
+    <div class="content">
+        <img src="img/corazones.jpg" alt="amistad">
+        <div class="text-center">
+            <p>"La amistad es un regalo que no se compra ni se vende, es un lazo que se construye en la confianza, el respeto y el amor. Una amiga verdadera está en las buenas y en las malas, ofreciéndote su mano sin esperar nada a cambio. Agradece por aquellas que llenan tu vida de sonrisas y cariño, porque ellas son las que hacen que cada día valga la pena. Una amiga es un tesoro que brilla en los momentos más oscuros, y su valor es incalculable. Gracias por ser esa amiga que ilumina mi vida."</p>
+
+        </div>
+        <img src="img/jaja.jpg" alt="amistad">
+    </div>
+
+    <p>Bienvenida, querida amiga. Por favor, ingresa tu usuario y contraseña para recibir tu mensaje especial.</p>
+
+    <form onsubmit="return redirigir()">
+        <input type="text" id="username" placeholder="Usuario" required><br>
+        <input type="password" id="password" placeholder="Contraseña" required><br>
+        <input type="submit" value="Aceptar">
+    </form>
+
+    <script>
+        function redirigir() {
+            const username = document.getElementById('username').value.toLowerCase();
+            const password = document.getElementById('password').value.toLowerCase();
+
+            if (username === 'daniela' && password === 'daniela2024') {
+                window.location.href = 'daniela.html';
+            } else if (username === 'gabriela' && password === 'gabriela2024') {
+                window.location.href = 'gabriela.html';
+            } else if (username === 'valerin' && password === 'valerin2024') {
+                window.location.href = 'valerin.html';
+            } else if (username === 'maryuris' && password === 'maryuris2024') {
+                window.location.href = 'maryuris.html';
+            } else if (username === 'saray' && password === 'saray2024') {
+                window.location.href = 'saray.html';
+            } else {
+                alert('Usuario o contraseña incorrectos.');
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>
